@@ -1,11 +1,14 @@
-import React from 'react';
+import React from "react";
+import PaperInput from "../../UI/organisms/PaperInput";
 
 function HomePage() {
-    return (
-        <>
-            hello, world!
-        </>
-    )
+  return (
+    <>
+      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+        <PaperInput />
+      </div>
+    </>
+  );
 }
 
-export default HomePage
+export default HomePage;
