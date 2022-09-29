@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-
+import { useSelector } from "react-redux";
 import Button from "../../basics/Button";
 
 function PaperViewer() {
   const [columns, setColumns] = useState(1);
+  const paperList = useSelector((state) => state.memo.paperList);
+  console.log(paperList);
   return (
     <>
       <div style={{ display: "flex", gap: "20px", alignItems: "center" }}>

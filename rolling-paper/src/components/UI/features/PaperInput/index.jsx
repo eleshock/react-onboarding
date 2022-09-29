@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import "./Submit.scss";
 import Input from "../../basics/Input";
 import Button from "../../basics/Button";
+import { useDispatch } from "react-redux";
+import { setPaperList } from "../../../../modules/memo";
 
 function PaperInput() {
+  const dispatch = useDispatch();
   const uploadPaper = () => {
     if (body !== "" && author !== "") {
       const newPaper = { body, author, color };
+      dispatch(setPaperList(newPaper));
     }
   };
 
