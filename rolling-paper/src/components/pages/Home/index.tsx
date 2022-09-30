@@ -2,11 +2,12 @@ import React from "react";
 import PaperInput from "../../ui/features/PaperInput";
 import PaperViewer from "../../ui/features/PaperViewer";
 import StickerSelect from "../../ui/features/StickerSelector";
+import "./style.scss";
 
 function HomePage() {
   return (
     <>
-      <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+      <div className="home-container">
         <PaperInput />
         <StickerSelect />
         <PaperViewer />

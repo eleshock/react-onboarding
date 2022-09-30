@@ -1,4 +1,16 @@
-.Submit {
+.submit-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.submit-button {
   font-size: 26px;
   cursor: pointer;
+}
+
+.color-selector {
+  display: flex;
+  gap: 12px;
 }

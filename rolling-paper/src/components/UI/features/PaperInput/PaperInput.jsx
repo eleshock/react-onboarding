@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./PaperInput.scss";
+import "./paperInput.scss";
 import Input from "../../basics/Input";
 import Button from "../../basics/Button";
 import { useDispatch } from "react-redux";
@@ -19,14 +19,7 @@ function PaperInput() {
   const [color, setColor] = useState("gray");
   const colorList = { pink: "#FED3DC", green: "#E2FFE9", yellow: "#FFFEAF" };
   return (
-    <div
-      style={{
-        display: "flex",
-        gap: "20px",
-        flexWrap: "wrap",
-        alignItems: "center",
-      }}
-    >
+    <div className="submit-container">
       <Input
         onSubmit={uploadPaper}
         onChange={(value) => setBody(value)}
@@ -39,7 +32,7 @@ function PaperInput() {
         placeholder="작성자"
         label="작성자"
       />
-      <div style={{ display: "flex", gap: "12px" }}>
+      <div className="color-selector">
         {Object.entries(colorList).map(([selectedColor, colorCode]) => (
           <Button
             key={colorCode}
@@ -53,7 +46,7 @@ function PaperInput() {
           />
         ))}
       </div>
-      <div className="Submit" onClick={uploadPaper}>
+      <div className="submit-button" onClick={uploadPaper}>
         작성하기
       </div>
     </div>

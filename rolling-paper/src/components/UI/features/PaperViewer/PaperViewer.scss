@@ -1,4 +1,10 @@
-.Paper {
+.align-container {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.paper {
   display: grid;
   gap: 20px;
   &.grid-1 {
