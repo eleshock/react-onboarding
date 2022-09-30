@@ -2,6 +2,7 @@ import React from "react";
 import PaperInput from "../../ui/features/PaperInput";
 import PaperViewer from "../../ui/features/PaperViewer";
 import StickerSelect from "../../ui/features/StickerSelector";
+import ToastViewer from "../../ui/features/ToastViewer";
 import "./style.scss";
 
 function HomePage() {
@@ -11,6 +12,7 @@ function HomePage() {
         <PaperInput />
         <StickerSelect />
         <PaperViewer />
+        <ToastViewer />
       </div>
     </>
   );

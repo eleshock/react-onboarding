@@ -19,7 +19,10 @@ export default function toast(state = initialState, action) {
     case FIRE_TOAST:
       return { ...state, toasts: [...state.toasts, action.toastId] };
     case REMOVE_TOAST:
-      return { ...state, toasts: {state.filter(toasts) => toasts.id !== toastId} };
+      return {
+        ...state,
+        toasts: state.toasts.filter((t) => t.id !== action.toastId),
+      };
     default:
       return state;
   }

@@ -6,14 +6,14 @@ import { fireToast, removeToast } from "../reducers/toast";
 export const useToast = () => {
   const dispatch = useDispatch();
 
-  // const removeToast = (toastID: ToastProps["id"]) => {
-  //   setToasts((prev) => prev.filter((toast) => toast.id !== toastID));
-  // };
-
-  const fireToast = (toast: Omit<ToastProps, "id">) => {
-    const toastId = uuidV4();
-    dispatch(fireToast(toast));
+  const toastOff = (toastID: ToastProps["id"]) => {
+    dispatch(removeToast(toastID));
   };
 
-  return { fireToast, removeToast };
+  const toastOn = () => {
+    const toastId = uuidV4();
+    dispatch(fireToast(toastId));
+  };
+
+  return { toastOn, toastOff };
 };
