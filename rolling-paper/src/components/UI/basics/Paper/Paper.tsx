@@ -2,11 +2,11 @@ import React from "react";
 import classNames from "classnames";
 import "./paper.scss";
 
-export type PaperProps = {
+interface PaperProps {
   body: string;
   author: string;
   color: string;
-};
+}
 
 function Paper({ props }: { props: PaperProps }) {
   const { body, author, color } = props;

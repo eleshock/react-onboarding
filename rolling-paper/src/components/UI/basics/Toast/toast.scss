@@ -1,0 +1,26 @@
+.toast {
+  width: 300px;
+  padding: 12px;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #eeeeee;
+  opacity: 0;
+  animation-duration: 2s;
+  animation-name: toastFadeInOut;
+  animation-iteration-count: 1;
+}
+
+@keyframes toastFadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
