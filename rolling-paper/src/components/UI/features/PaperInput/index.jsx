@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Submit.scss";
+import "./PaperInput.scss";
 import Input from "../../basics/Input";
 import Button from "../../basics/Button";
 import { useDispatch } from "react-redux";
@@ -16,7 +16,7 @@ function PaperInput() {
 
   const [body, setBody] = useState("");
   const [author, setAuthor] = useState("");
-  const [color, setColor] = useState("#EEEEEE");
+  const [color, setColor] = useState("gray");
   const colorList = { pink: "#FED3DC", green: "#E2FFE9", yellow: "#FFFEAF" };
   return (
     <div
@@ -45,10 +45,10 @@ function PaperInput() {
             key={colorCode}
             content={`${colorCode}`}
             onClick={() => {
-              setColor(colorCode);
+              setColor(selectedColor);
             }}
             backgroundColor={selectedColor}
-            selected={colorCode === color}
+            selected={selectedColor === color}
             selectedBorderColor="blackBorder"
           />
         ))}

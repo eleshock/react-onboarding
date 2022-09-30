@@ -1,0 +1,29 @@
+$gray: #eeeeee;
+$pink: #fed3dc;
+$green: #e2ffe9;
+$yellow: #fffeaf;
+
+.Paper {
+  height: 200px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 20px;
+  & div:nth-child(2) {
+    margin-top: auto;
+  }
+
+  &.gray {
+    background-color: $gray;
+  }
+  &.pink {
+    background-color: $pink;
+  }
+  &.green {
+    background-color: $green;
+  }
+  &.yellow {
+    background-color: $yellow;
+  }
+}

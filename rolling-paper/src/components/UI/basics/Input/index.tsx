@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./input.scss";
+import "./Input.scss";
 
 interface InputProps {
   onChange?: (value: string) => void;

@@ -1,6 +1,9 @@
+import classNames from "classnames";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Button from "../../basics/Button";
+import Paper from "../../basics/Paper";
+import "./PaperViewer.scss";
 
 function PaperViewer() {
   const [columns, setColumns] = useState(1);
@@ -19,6 +22,11 @@ function PaperViewer() {
             selected={number === columns}
             selectedBorderColor="grayBorder"
           />
+        ))}
+      </div>
+      <div className={`Paper grid-${columns}`}>
+        {paperList.map((paper, index) => (
+          <Paper key={index} props={paper} />
         ))}
       </div>
     </>
