@@ -3,21 +3,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 
 import { Provider } from "react-redux";
-import { legacy_createStore as createStore } from "redux";
-import { rootReducer } from "./modules";
-import { persistStore } from "redux-persist";
 import { PersistGate } from "redux-persist/integration/react";
+import configureStore from "./store";
 
-const store = createStore(rootReducer);
-const persistor = persistStore(store);
+const { store, persistor } = configureStore();
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <Provider store={store}>
-    {/* <PersistGate loading={null} persistor={persistor}>
-    </PersistGate> */}
-    <App />
+    <PersistGate loading={null} persistor={persistor}>
+      <App />
+    </PersistGate>
   </Provider>
 );
